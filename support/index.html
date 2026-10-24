@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Get help with My Touchpoint. Contact the developer, report an issue, or find answers about contacts, reminders, iCloud sync, and greetings.">
+  <title>Support · My Touchpoint</title>
+  <style>
+    :root { color-scheme: light dark; --background: #f8f7fb; --surface: #fff; --text: #242230; --muted: #625e70; --accent: #6542b5; --soft: #f0ebfa; --line: #e4e0ed; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--background); color: var(--text); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 800px; margin: auto; padding: 0 28px; }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; top: -100px; left: 20px; padding: 8px 16px; background: var(--surface); }
+    .skip:focus { top: 12px; }
+    header { padding: 40px 0 32px; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; }
+    .mark { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: #7651c8; }
+    .mark::after { content: ""; width: 13px; height: 13px; border: 3px solid white; border-radius: 50%; }
+    .eyebrow { margin: 32px 0 8px; color: var(--accent); font-size: 12px; font-weight: 750; letter-spacing: 2px; text-transform: uppercase; }
+    h1 { margin: 0 0 12px; font-size: clamp(36px, 7vw, 52px); line-height: 1.15; letter-spacing: -1.5px; }
+    h2 { margin: 0 0 12px; font-size: 23px; line-height: 1.35; letter-spacing: -.5px; }
+    p { margin: 0 0 14px; }
+    .intro { max-width: 600px; color: var(--muted); font-size: 18px; }
+    main { padding-top: 32px; padding-bottom: 48px; }
+    section + section { margin-top: 32px; }
+    .contact { padding: 24px; background: var(--soft); border: 1px solid var(--line); border-radius: 18px; }
+    .email { display: inline-block; font-size: 19px; font-weight: 650; overflow-wrap: anywhere; }
+    .hint { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    details { padding: 18px 20px; border: 1px solid var(--line); background: var(--surface); border-radius: 14px; }
+    details + details { margin-top: 10px; }
+    summary { font-weight: 650; cursor: pointer; }
+    details p { margin: 12px 0 0; color: var(--muted); }
+    footer { padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+    @media (max-width: 480px) { .wrap { padding-left: 22px; padding-right: 22px; } header { padding-top: 28px; } .contact { padding: 20px; } }
+    @media (prefers-color-scheme: dark) { :root { --background: #17151e; --surface: #211e2b; --text: #f0edf7; --muted: #b9b2c8; --accent: #c1a5ff; --soft: #2b233c; --line: #393143; } }
+    @media print { :root { --background: #fff; --surface: #fff; --text: #000; --muted: #333; --accent: #333; --soft: #fff; --line: #ccc; } .skip { display: none; } .contact { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#support">Skip to support</a>
+  <header>
+    <div class="wrap">
+      <div class="brand"><span class="mark" aria-hidden="true"></span>My Touchpoint</div>
+      <p class="eyebrow">We’re here to help</p>
+      <h1>My Touchpoint Support</h1>
+      <p class="intro">Need help remembering an important date, preparing a greeting, or using the app? Contact the developer or find a quick answer below.</p>
+    </div>
+  </header>
+  <main class="wrap" id="support">
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact support</h2>
+      <p>For questions, bug reports, feedback, or feature requests, email:</p>
+      <a class="email" href="mailto:voronovski@outlook.com?subject=My%20Touchpoint%20Support">voronovski@outlook.com</a>
+      <p class="hint">If the link does not open your email app, copy the address into your preferred email service.</p>
+    </section>
+    <section aria-labelledby="report-title">
+      <h2 id="report-title">Reporting a problem</h2>
+      <p>To help us understand what happened, please include:</p>
+      <ul>
+        <li>Your device model and iOS version.</li>
+        <li>The My Touchpoint app version.</li>
+        <li>What you were trying to do, what happened, and what you expected.</li>
+        <li>Steps to reproduce the issue and a screenshot, if useful.</li>
+      </ul>
+      <p class="hint">Please hide personal contact details in screenshots. Do not send passwords, Apple account credentials, or private message archives.</p>
+    </section>
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <details>
+        <summary>Does My Touchpoint send greetings automatically?</summary>
+        <p>No. My Touchpoint helps you plan greetings and reminds you when it is time to reach out. You review the message and choose when to send it using the system message or mail composer.</p>
+      </details>
+      <details>
+        <summary>Why am I not receiving reminders?</summary>
+        <p>Check that notifications for My Touchpoint are allowed in your device’s Settings. Review your reminder schedule in My Touchpoint Settings, and check whether Focus or notification settings are silencing or delaying alerts.</p>
+      </details>
+      <details>
+        <summary>How do I import contacts?</summary>
+        <p>Use the contact import feature and allow access to the people you want to select. Only people you choose to import are saved in My Touchpoint. You can manage access in your device’s privacy settings or add people manually.</p>
+      </details>
+      <details>
+        <summary>How do I check iCloud sync?</summary>
+        <p>Open My Touchpoint Settings and check the Private iCloud backup section. Make sure your devices use the same Apple account, iCloud is available to the app, you have available iCloud storage, and your internet connection is working. Use “Sync iCloud now” to retry.</p>
+      </details>
+      <details>
+        <summary>Why is message generation unavailable?</summary>
+        <p>Generation requires a supported device, a compatible operating system, and Apple Intelligence enabled and available for your language and region. You can still write your own greetings and use templates.</p>
+      </details>
+      <details>
+        <summary>How can I export or delete my information?</summary>
+        <p>You can export a workspace archive from My Touchpoint Settings and edit or delete saved items in the app. Deleting the app does not automatically remove iCloud data, backups, or files you exported. See the <a href="../privacy/#control">retention and deletion section of our Privacy Policy</a> for details.</p>
+      </details>
+    </section>
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy questions</h2>
+      <p>Read our <a href="../privacy/">Privacy Policy</a> to learn how My Touchpoint handles your information. You can send privacy questions and requests to the same support email above.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-row"><span>© 2026 My Touchpoint</span><a href="../privacy/">Privacy Policy</a></div>
+  </footer>
+</body>
+</html>

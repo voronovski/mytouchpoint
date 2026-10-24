@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Learn how My Touchpoint handles contacts, personal messages, iCloud sync, permissions, and your privacy choices.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy · My Touchpoint</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f8f7fb;
+      --surface: #ffffff;
+      --text: #242230;
+      --muted: #625e70;
+      --accent: #6542b5;
+      --soft: #f0ebfa;
+      --line: #e4e0ed;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 32px; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; padding: 8px 16px; background: var(--surface); z-index: 2; }
+    .skip:focus { top: 16px; }
+    .wrap { max-width: 1080px; margin: auto; padding: 0 32px; }
+    header { padding: 48px 0 40px; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
+    .mark { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: var(--accent); }
+    .mark::after { content: ""; width: 13px; height: 13px; border: 3px solid white; border-radius: 50%; }
+    .eyebrow { margin: 38px 0 8px; color: var(--accent); font-size: 12px; font-weight: 750; letter-spacing: 2px; text-transform: uppercase; }
+    h1 { margin: 0 0 12px; font-size: clamp(36px, 6vw, 56px); line-height: 1.15; letter-spacing: -2px; }
+    .intro { max-width: 660px; color: var(--muted); font-size: 19px; line-height: 1.6; }
+    .date { margin: 20px 0 0; color: var(--muted); font-size: 13px; }
+    .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding-top: 40px; padding-bottom: 64px; }
+    nav { align-self: start; position: sticky; top: 32px; font-size: 13px; }
+    .nav-title { margin: 0 0 12px; font-weight: 700; }
+    nav ol { list-style: none; margin: 0; padding: 0; }
+    nav li { margin: 0 0 9px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); text-decoration: underline; }
+    main { min-width: 0; }
+    .summary { padding: 24px 28px; margin: 0 0 36px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .summary h2 { margin: 0 0 12px; font-size: 18px; }
+    .summary ul { margin: 0; padding-left: 20px; }
+    .summary li { margin: 5px 0; }
+    section + section { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 14px; font-size: 23px; line-height: 1.35; letter-spacing: -.5px; }
+    p { margin: 0 0 15px; }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note { padding: 16px 20px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--soft); }
+    .contact { padding: 24px; border-radius: 16px; background: var(--soft); }
+    .contact a { overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 32px; color: var(--muted); font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 22px; }
+      header { padding-top: 28px; padding-bottom: 28px; }
+      .eyebrow { margin-top: 28px; }
+      .layout { display: block; padding-top: 24px; padding-bottom: 40px; }
+      nav { position: static; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+      nav ol { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+      nav li { margin: 0; }
+      .summary { padding: 20px; }
+      h2 { font-size: 21px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --background: #17151e; --surface: #211e2b; --text: #f0edf7; --muted: #b9b2c8; --accent: #c1a5ff; --soft: #2b233c; --line: #393143; }
+      .mark { background: #7651c8; }
+    }
+    @media print {
+      :root { --background: #fff; --surface: #fff; --text: #000; --muted: #333; --accent: #333; --soft: #fff; --line: #ccc; }
+      body { font-size: 11pt; }
+      .wrap { max-width: none; padding: 0; }
+      header { padding-top: 0; }
+      .layout { display: block; }
+      nav, .skip, .back-top { display: none; }
+      h1 { font-size: 32pt; }
+      h2 { break-after: avoid; }
+      .summary, .contact { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#policy">Skip to privacy policy</a>
+  <header>
+    <div class="wrap">
+      <div class="brand"><span class="mark" aria-hidden="true"></span>My Touchpoint</div>
+      <p class="eyebrow">Your people. Your privacy.</p>
+      <h1>Privacy Policy</h1>
+      <p class="intro">A clear explanation of how your information is used when you remember important dates, prepare greetings, and stay in touch with My Touchpoint.</p>
+      <p class="date">Effective date: <time datetime="2026-10-24">October 24, 2026</time> · Last updated: <time datetime="2026-10-24">October 24, 2026</time></p>
+    </div>
+  </header>
+  <div class="wrap layout">
+    <nav aria-label="Policy sections">
+      <p class="nav-title">On this page</p>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#information">Information you use</a></li>
+        <li><a href="#storage">Storage and iCloud</a></li>
+        <li><a href="#permissions">Permissions and visibility</a></li>
+        <li><a href="#intelligence">Apple Intelligence</a></li>
+        <li><a href="#services">Messages and Apple Maps</a></li>
+        <li><a href="#diagnostics">Analytics and diagnostics</a></li>
+        <li><a href="#control">Retention and your choices</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children’s privacy</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+    <main id="policy">
+      <aside class="summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Privacy at a glance</h2>
+        <ul>
+          <li>Your app content is stored on your device and syncs through your iCloud account when available.</li>
+          <li>Only contacts you choose to import are saved in My Touchpoint.</li>
+          <li>My Touchpoint does not include advertising or third-party tracking SDKs, or sell your personal information.</li>
+          <li>You review your messages and choose when to send them.</li>
+        </ul>
+      </aside>
+
+      <section id="overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">1. Overview</h2>
+        <p>This Privacy Policy applies to the My Touchpoint app and this privacy policy website. “We,” “us,” and “our” refer to the developer of My Touchpoint, reachable at <a href="mailto:voronovski@outlook.com">voronovski@outlook.com</a>.</p>
+        <p>My Touchpoint helps you manage personal contacts, important dates, greetings, and events. You do not need to create a separate My Touchpoint account. We do not operate a separate server that receives your address book, saved greetings, or event content.</p>
+      </section>
+
+      <section id="information" aria-labelledby="information-title">
+        <h2 id="information-title">2. Information you use in the app</h2>
+        <p>Depending on the features you use, My Touchpoint stores and processes:</p>
+        <ul>
+          <li><strong>People and contact details:</strong> names, nicknames, phone numbers, email addresses, organizations, contact photos, device contact identifiers, relationship categories, notes, tags, preferred languages, contact methods, and time zones.</li>
+          <li><strong>Important dates and plans:</strong> birthdays, anniversaries, custom occasions, event dates, participants, event locations, reminder schedules, and greeting or contact completion history.</li>
+          <li><strong>Content you create or select:</strong> message drafts, greeting templates and their saved versions, collections, images, and details you provide to personalize a message.</li>
+          <li><strong>Your preferences:</strong> your sender name and signature, language, reminder settings, calendar display settings, and occasion preferences.</li>
+        </ul>
+        <p>This information is used to provide the features you choose: organizing people and dates, preparing messages, scheduling reminders, displaying widgets, syncing your workspace, and importing or exporting your data. Please only add information about other people that you are entitled to use.</p>
+      </section>
+
+      <section id="storage" aria-labelledby="storage-title">
+        <h2 id="storage-title">3. Device storage and iCloud sync</h2>
+        <p>My Touchpoint saves your workspace in the app’s local storage. When an iCloud account is available to the app, it automatically syncs workspace records and images using a private CloudKit database associated with that account. Selected preferences and a small widget summary also use Apple’s iCloud key-value storage.</p>
+        <p>Apple processes the data needed to provide these services under its <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> and applicable iCloud terms. Your private workspace is not published to a public database or shared with other My Touchpoint users.</p>
+        <p>The developer does not receive a copy of your private iCloud workspace through a separate developer-operated service. Sync availability depends on your Apple account, device settings, connectivity, and iCloud storage.</p>
+        <p>Data may also be included in device or iCloud backups according to your Apple settings. Backups and files you export are separate from the app’s active workspace.</p>
+      </section>
+
+      <section id="permissions" aria-labelledby="permissions-title">
+        <h2 id="permissions-title">4. Permissions and visible information</h2>
+        <p><strong>Contacts.</strong> With your permission, My Touchpoint reads contacts made available by your device so you can search and select people to import. The import screen may temporarily process accessible contacts for browsing and search; only the entries you select are saved in your My Touchpoint workspace. Imported entries may then sync through iCloud. You can also add people manually.</p>
+        <p><strong>Photos and files.</strong> The app uses system pickers to import images or files you choose. It does not scan your photo library. Selected images become part of the content you save and may sync with that content.</p>
+        <p><strong>Notifications and widgets.</strong> Local reminders and widgets can display names, occasions, dates, or status information on your device. Notification content may be visible on your Lock Screen according to your system settings. You can use “Hide names in notifications” in My Touchpoint and control previews, permissions, and widgets in your device settings.</p>
+        <p>Revoking contact access does not automatically delete contacts you previously imported. You can remove saved people within the app.</p>
+      </section>
+
+      <section id="intelligence" aria-labelledby="intelligence-title">
+        <h2 id="intelligence-title">5. Apple Intelligence</h2>
+        <p>On supported devices, My Touchpoint offers optional message generation using Apple’s on-device Foundation Models. The model processes the context used for your request, which may include names, relationship details, the occasion, your sender name or signature, existing drafts, and personal details or instructions you provide.</p>
+        <p>My Touchpoint does not send these generation requests to a developer-operated AI server or a third-party AI provider. A generated message you save becomes part of your workspace and may sync through iCloud like other drafts. You can write and edit messages without using generation.</p>
+      </section>
+
+      <section id="services" aria-labelledby="services-title">
+        <h2 id="services-title">6. Messages, email, and place search</h2>
+        <p><strong>Sending messages.</strong> When you choose to prepare a message or email, My Touchpoint passes the recipient details, message content, and selected attachments to Apple’s system message or mail composer. My Touchpoint does not send greetings automatically. When you send, your communication service and the recipient receive the content under the terms and privacy practices of that service.</p>
+        <p><strong>Event locations.</strong> Searching for an address or place uses Apple MapKit. Search text and requests to resolve a selected place are sent to Apple to return results. A location you save becomes part of your event and may sync through iCloud. My Touchpoint does not request access to your device’s precise location for this feature. See <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple Maps &amp; Privacy</a>.</p>
+        <p><strong>Exports.</strong> You can export an archive or template library to a location you select. Exported files may contain personal information. Their storage and any sharing you initiate are controlled by you and the service you choose.</p>
+      </section>
+
+      <section id="diagnostics" aria-labelledby="diagnostics-title">
+        <h2 id="diagnostics-title">7. Advertising, analytics, and diagnostics</h2>
+        <p>My Touchpoint does not show advertisements, include third-party analytics or tracking SDKs, or track you across other companies’ apps and websites. We do not sell personal information or share it for targeted advertising.</p>
+        <p>The app may write technical error information to the device’s system logs to help diagnose storage or sync problems. Apple may collect and make available app analytics and crash reports according to your Apple privacy and diagnostic-sharing settings.</p>
+        <p>If you contact us for support, we receive your email address and the information you choose to send. We use it to respond and resolve your request, retain it only as needed for that purpose or legal obligations, and do not use it for advertising. Please avoid sending private contact lists or message archives unless necessary.</p>
+      </section>
+
+      <section id="control" aria-labelledby="control-title">
+        <h2 id="control-title">8. Retention, deletion, and your choices</h2>
+        <p>Your saved content remains in your workspace until you edit or delete it. Deletions from the active workspace are propagated through iCloud when sync is available and completes. Saved template versions, retained history, recovery files, and older backups may contain earlier information.</p>
+        <ul>
+          <li>Edit or delete saved people, greetings, templates, and events using the app’s controls.</li>
+          <li>Export your workspace from My Touchpoint Settings if you want a copy.</li>
+          <li>Manage Contacts and Notifications permissions in your device settings.</li>
+          <li>Manage My Touchpoint’s iCloud access and stored iCloud data through your Apple account and device settings, where available.</li>
+          <li>Delete exported files and backups separately from the app.</li>
+        </ul>
+        <p class="note"><strong>Deleting the app alone does not delete your iCloud data.</strong> A device that still has a local workspace may upload it again when sync resumes. To remove all copies, delete unwanted content while sync is working, account for other devices, remove local app data, and manage any remaining iCloud copies, backups, and exported files separately.</p>
+        <p>Depending on where you live, you may have rights to access, correct, delete, or obtain a copy of personal information, restrict or object to certain processing, withdraw permission, or complain to a data protection authority. Contact us to ask about these rights. Most workspace data is managed directly by you; the developer cannot retrieve or erase your private device or iCloud content through a separate backend.</p>
+      </section>
+
+      <section id="security" aria-labelledby="security-title">
+        <h2 id="security-title">9. Security</h2>
+        <p>My Touchpoint uses Apple’s app storage, permission controls, and iCloud infrastructure. Protect your devices and Apple account with appropriate security settings. No storage or transmission method can guarantee absolute security, and files you export or messages you send are subject to the protections of their destination.</p>
+      </section>
+
+      <section id="children" aria-labelledby="children-title">
+        <h2 id="children-title">10. Children’s privacy</h2>
+        <p>My Touchpoint is a general-audience app and is not directed to children under 13. We do not knowingly collect personal information directly from children under 13 through support or this website. If you believe a child has sent personal information to us, contact us so we can address it.</p>
+      </section>
+
+      <section id="website" aria-labelledby="website-title">
+        <h2 id="website-title">11. This privacy policy website</h2>
+        <p>This page does not use analytics scripts, advertising, forms, cookies, or local storage. Fonts and styling are included locally, without third-party font or script requests.</p>
+        <p>When this page is hosted on GitHub Pages, GitHub processes technical visitor information, including IP addresses logged for security purposes. This hosting activity is governed by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Opening an external link is subject to the destination website’s privacy practices.</p>
+      </section>
+
+      <section id="changes" aria-labelledby="changes-title">
+        <h2 id="changes-title">12. Changes to this policy</h2>
+        <p>We may update this policy as the app or its data practices change. The revised policy will be posted on this page with an updated date. If a material change requires additional notice or permission, we will provide it as required.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">13. Contact</h2>
+        <div class="contact">
+          <p>For privacy questions or requests, contact the developer of My Touchpoint:</p>
+          <a href="mailto:voronovski@outlook.com">voronovski@outlook.com</a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap footer-row"><span>© 2026 My Touchpoint</span><a href="../support/">Support</a><a class="back-top" href="#top">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
