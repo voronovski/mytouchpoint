@@ -1,157 +1,597 @@
-/* Adapted from the supplied pitch kit. Business ideas are explicitly prospective. */
-const pitchContent = {
-  en: {
-    title: 'Remember your people. Be there on time.',
-    intro: 'My Touchpoint helps you show up for the people who matter, on time and in your own words: to celebrate them, thank them, bring them together, and stay close.',
-    principles: [
-      ['On time', 'A reminder early enough to choose a gift or pick up the phone.'],
-      ['Personal', 'A thoughtful draft, shaped into words that sound like you.'],
-      ['Your decision', 'You review the message and choose when to press Send.']
-    ],
-    taglines: ['Be there on time.', 'Small gestures. Lasting memories.', 'Technology that brings people closer.'],
-    slides: [
-      { key: 'cover', label: 'The idea', title: 'My Touchpoint. A little attention goes a long way.',
-        points: ['An iPhone app for remembering the people who matter and reaching out at the right moment.', 'Birthdays, anniversaries, holidays, and personal occasions in one calm plan.', 'People, moments, and the words you want to say, together.'],
-        text: ['My Touchpoint is a personal attention assistant. It brings together important people, their meaningful dates, and the messages you want to send. Whether you want to celebrate, say thank you, or invite someone over, it helps you make room for that gesture.'],
-        visual: 'The Today screen on iPhone: “Mom’s birthday in 3 days,” with a greeting ready to review.',
-        speaker: 'Open with a familiar question: “Who was the last person you wished a happy birthday a day late?”' },
-      { key: 'problem', label: 'The problem', title: 'A busy week can become a long silence.',
-        points: ['A friend’s birthday comes back to mind late at night.', 'A thoughtful wish becomes a hurried message.', 'Family, friends, colleagues, and clients all have moments worth remembering.', 'After a missed occasion, reaching out can feel harder.'],
-        text: ['Losing touch can happen quietly. A hectic week pushes a birthday out of mind. A family anniversary comes back to us too late to call. We send the same quick holiday wish to several people, then put off a more personal conversation. Family, work, moves, and different countries and cultures give us more to remember than we can comfortably hold in our heads.'],
-        visual: 'A late-night birthday reminder beside an empty message field.',
-        speaker: 'Describe the everyday pressure of a crowded life, without blaming someone for forgetting.' },
-      { key: 'context', label: 'The missing connection', title: 'Bring the date, the person, and the words together.',
-        points: ['Dates live in calendars; personal details live in notes and conversations.', 'A reminder is only the beginning: you still need to decide what to say.', 'Language, contact preferences, and past greetings add useful context.', 'One place makes preparing for the moment easier.'],
-        text: ['Calendars and reminders are useful, but the information around a relationship can be scattered across contacts, notes, and chats. When the day arrives, we still have to find the right words and remember how this person likes to hear from us. My Touchpoint brings that preparation into one place.'],
-        visual: 'Contacts, dates, and a message draft coming together around one person.' },
-      { key: 'product', label: 'The product', title: 'A place for your important people and their moments.',
-        points: ['Save people, dates, occasions, and greeting ideas together.', 'Plan ahead and prepare a personal message for each recipient.', 'Review, edit, and open the message in Messages or Mail.', 'Keep the final words and the decision to send in your hands.'],
-        text: ['My Touchpoint keeps the people who matter, their birthdays and anniversaries, and your greeting templates together. It helps you plan ahead, prepares personal drafts, and reminds you when it is time to act. You review the words and send the message yourself through the system message or mail composer.'],
-        visual: 'The app’s core idea in three words: People · Moments · Words.' },
-      { key: 'steps', label: 'How it works', title: 'People. Occasions. Words. The moment.',
-        points: ['People: add them manually or import selected contacts. A name is enough to start.', 'Occasions: choose birthdays, anniversaries, cultural holidays, or your own dates.', 'Words: use template variations, personal details, and up to five photos; get optional on-device help from Apple Intelligence.', 'The moment: preview the plan, receive a reminder, review the greeting, and send it yourself.'],
-        text: ['Start with one person. Add important dates and choose how and in which language you want to reach out. Prepare templates with variations and personalized names, occasions, and dates. Add photos or use Apple Intelligence on a supported device to help draft the message. Preview each recipient’s greeting before saving your plan, then review it again when the reminder arrives.'],
-        visual: 'Four screens in sequence: People → Occasions → Message → Today.' },
-      { key: 'year', label: 'An illustrative story', title: 'A year of small gestures.', illustration: true,
-        points: ['January: Anna adds the people she cares about and plans the year’s occasions.', 'March: an early reminder gives her time to choose flowers and prepare a birthday message for her mom.', 'June: a different template variation makes her friends’ anniversary greeting feel fresh.', 'December: she prepares individual dinner invitations and tracks whom she has contacted.'],
-        text: ['Imagine Anna planning a year of occasions. In January, she adds her close circle. Before her mom’s birthday, a reminder gives her time to choose flowers and write a warm note with a family photo. For her friends’ anniversary, she uses a different template variation. In December, she plans a dinner and sends personal invitations. This is an illustrative scenario, rather than a customer result.'],
-        visual: 'A January-to-December timeline with a birthday, an anniversary, and a dinner.',
-        speaker: 'Walk through one person’s year. Use the story as an example, not a measured outcome.' },
-      { key: 'gatherings', label: 'Gatherings', title: 'Make room to meet in person.',
-        points: ['Create a dinner, birthday party, reunion, or another event.', 'Choose participants, a time, and a place using Apple Maps.', 'Prepare personal invitations with the location and event details.', 'Set reminders to contact participants and see whom you have already invited.'],
-        text: ['Some moments deserve a gathering. Create an event, choose participants, and select a place with Apple Maps. Prepare an invitation for each person, review it, and send it yourself. Reminders help you follow up before the event, while participant statuses show whom you have already contacted.'],
-        visual: 'An event with its place, time, and participant invitation statuses.' },
-      { key: 'benefits', label: 'Everyday value', title: 'Less to keep in your head. More time to be there.',
-        points: ['Prepare while there is time to choose a gift, arrange a call, or write a thoughtful note.', 'Start with a draft you can make your own.', 'Keep family, friends, colleagues, and clients in one plan.', 'Build a rhythm of small, regular gestures.'],
-        text: ['The practical benefit is a calmer plan for the week, month, and year ahead. You have the right details nearby and a starting point for your message. The emotional benefit is the opportunity to show attention more consistently, through small gestures that fit into everyday life.'],
-        visual: 'One Today screen bringing the next occasions and messages into focus.' },
-      { key: 'habit', label: 'The habit', title: 'A small place in your morning.',
-        points: ['A notification, Home Screen widget, or Siri shortcut brings the next moment into view.', 'Open the draft, adjust the words, and choose to send.', 'Add a person, note, or useful template whenever you think of one.', 'Review upcoming occasions regularly and plan further ahead when it suits you.'],
-        text: ['A quick look at Today can become part of your morning. A reminder or widget brings an upcoming occasion into view. You review the prepared greeting, adjust a few words, and reach out. Every person, note, and template you add makes the next gesture easier to prepare.'],
-        visual: 'A simple sequence: reminder → review → reach out → keep the connection.' },
-      { key: 'trust', label: 'What we believe', title: 'Technology that helps people grow closer.',
-        points: ['You choose the final words and press Send.', 'Optional Apple Intelligence helps draft messages on supported devices.', 'Your workspace is stored on your device and syncs through your private iCloud.', 'A focused experience with no social feed or advertising.'],
-        text: ['Meaningful communication starts with the person sending it. My Touchpoint keeps you in control of the final message and the decision to send. Optional on-device generation helps when words are hard to find. Your workspace lives on your device and syncs through your private iCloud account when available. The app gives attention a quiet place of its own.'],
-        visual: 'An example reply: “Thank you for remembering. That made my day.”',
-        speaker: 'Use any reply as illustrative copy, not a real testimonial.' },
-      { key: 'audience', label: 'Audience', title: 'People who make relationships a priority.', partners: true,
-        points: ['Busy adults balancing family, friends, and work.', 'People living far from loved ones, including international families celebrating across cultures.', 'Professionals who maintain long-term relationships with clients and colleagues.', 'People already making time for occasions and gifts, and looking for a calmer way to plan.'],
-        text: ['The proposed audiences include busy adults, people living far from loved ones, and professionals whose work depends on personal relationships. Examples include realtors, advisors, agents, and coaches. These are audience hypotheses for a pilot, not claims about an existing customer base.'],
-        visual: 'Three audience portraits: a busy household, an international family, and a relationship-focused professional.' },
-      { key: 'partnerships', label: 'Partnership concepts', title: 'Help someone act on a thoughtful intention.', partners: true, future: true,
-        points: ['Gifts and delivery: explore timely ideas for flowers, experiences, or subscriptions.', 'Wish lists: explore ways to make choosing a gift more personal.', 'Affiliate programs: discuss referral arrangements for relevant services.', 'Branded collections: consider seasonal greeting templates and designs.', 'Business tools: explore workflows for client and employee occasions.'],
-        text: ['Potential partnerships could connect a planned occasion with a useful next step: choosing flowers, finding an experience, or preparing a seasonal greeting. Formats to explore include gift delivery, wish lists, affiliate relationships, branded collections, and business tools. These are concepts for discussion; they are not active integrations or offers.'],
-        visual: 'A clearly labeled concept showing an optional gift idea alongside an upcoming occasion.',
-        speaker: 'Propose a focused pilot with a partner. Keep consent, clear labeling, and user control central.' },
-      { key: 'business', label: 'Commercial direction', title: 'Build a business around useful, timely help.', partners: true, future: true,
-        points: ['An upcoming occasion creates a natural moment to consider a gift or service.', 'Potential revenue streams: Premium subscriptions, partner commissions, branded content, and business plans.', 'Any future partner offer should be optional and clearly labeled.', 'Audience assumptions, market size, and pilot performance still need validation.'],
-        text: ['The commercial idea is to make a relevant service available when someone is already preparing for an occasion. Potential revenue streams include subscriptions, referral commissions, branded content, and business plans. They remain options to evaluate. A pilot should establish demand and usefulness, with transparent offers and respect for personal information. No traction, market-size, or revenue figures are asserted here.'],
-        visual: 'A concept map linking an occasion, the user’s intention, and an optional partner service.' },
-      { key: 'future', label: 'Possible next chapters', title: 'From personal reminders to shared moments.', future: true,
-        points: ['Today: a native iPhone app in English and Russian, currently in App Store review.', 'Explore Android and web access for a wider circle of people.', 'Explore wish lists, gift ideas, and shared family planning.', 'Consider a richer history of gifts and messages, plus delivery, booking, and gift-card integrations.'],
-        text: ['My Touchpoint is a native iPhone app in English and Russian and is currently under App Store review. Possible future directions include Android and web access, wish lists, shared family circles, a richer history of gestures, and connections to gifting or booking services. These are directions to explore, with no announced release dates or commitment to availability.'],
-        visual: 'Two columns: available product capabilities and ideas to explore.' },
-      { key: 'join', label: 'The next step', title: 'Start with someone you have been meaning to reach out to.',
-        points: ['Think of your three closest people and whose important day comes next.', 'The iPhone app is currently under App Store review.', 'For product questions, contact the developer.', 'For partners: discuss a focused pilot for a meaningful upcoming occasion.'],
-        text: ['Start by thinking of the people you most want to make time for. My Touchpoint is currently under App Store review; contact the developer with product questions. If you are a brand or service interested in helping people celebrate and connect, get in touch to discuss a potential pilot.'],
-        visual: 'A clear contact link and the current App Store review status.' }
+'use strict';
+
+const kit = {
+  "en": {
+    "ui": {
+      "deck": "Slides",
+      "text": "Full text",
+      "language": "Language",
+      "format": "Format",
+      "previous": "Previous slide",
+      "next": "Next slide",
+      "print": "Print / PDF",
+      "copy": "Copy text",
+      "fullscreen": "Full screen",
+      "exitFullscreen": "Exit full screen",
+      "notes": "Speaker notes",
+      "privacy": "Privacy Policy",
+      "support": "Support",
+      "source": "Source material",
+      "copied": "Copied",
+      "copyHelp": "Select and copy the text below.",
+      "review": "iPhone app · In App Store review",
+      "slide": "Slide",
+      "of": "of",
+      "jump": "Choose a slide",
+      "keyboard": "Use ← → to move between slides",
+      "concept": "Future directions",
+      "example": "Illustrative example",
+      "contact": "o.chetrari@gmail.com",
+      "storyTitle": "My Touchpoint: remember people, create moments",
+      "deckDescription": "10 slides. One story about attention, connection, and the moments that matter.",
+      "skip": "Skip to presentation"
+    },
+    "story": {
+      "paragraphs": [
+        "My Touchpoint helps you remember birthdays, anniversaries, and important occasions—and turn them into personal messages, invitations, and moments people keep.",
+        "Calendar keeps dates and alerts in order. My Touchpoint brings the person, their preferences, and a prepared greeting together, so you know whom to contact and have something thoughtful to say.",
+        "Add your people, choose occasions, and prepare messages with template variations, photos, or optional Apple Intelligence on supported devices. A quick look at Today shows what is coming up. Review the draft, make it yours, and send it yourself through Messages or Mail.",
+        "For partners, upcoming occasions offer a natural setting for useful services. Potential formats include gifts and delivery, wish lists, affiliate programmes, branded collections, and business tools. Let’s explore one focused pilot.",
+        "The iPhone app supports English and Russian and is currently in App Store review. Start with three people you care about. For launch or partnership questions: o.chetrari@gmail.com.",
+        "My Touchpoint. Remember people. Create moments."
+      ]
+    },
+    "slides": [
+      {
+        "type": "opening",
+        "key": "problem",
+        "kicker": "The problem",
+        "title": "You meant to write.\nThe day slipped away.",
+        "lead": "People matter to us. Busy lives make the moments easy to miss.",
+        "statement": "My Touchpoint helps you remember your people and make them feel remembered.",
+        "clock": "11:47 PM",
+        "notification": "Mom’s birthday · Today",
+        "draft": "“Happy birthday! Sorry it’s so late…”",
+        "note": "A familiar moment. An opportunity to do it differently.",
+        "speaker": "Begin with a recognisable situation: remembering a birthday when the day is almost over. The problem is the gap between caring about someone and finding a moment to act."
+      },
+      {
+        "type": "comparison",
+        "key": "calendar",
+        "kicker": "Why a separate app?",
+        "title": "“I already have Calendar.\nWhy do I need this?”",
+        "lead": "Calendar is good at dates and alerts. My Touchpoint prepares the personal gesture around them.",
+        "columns": [
+          "The job",
+          "Calendar on your phone",
+          "My Touchpoint"
+        ],
+        "rows": [
+          [
+            "Remember a birthday",
+            "A birthday or recurring event, with an alert",
+            "The occasion, linked to the person"
+          ],
+          [
+            "Prepare what to say",
+            "You prepare the greeting separately",
+            "Personal drafts, template variations, photos"
+          ],
+          [
+            "Keep personal context",
+            "Event notes you maintain yourself",
+            "A person’s language, contact method, and important dates"
+          ]
+        ],
+        "takeaway": "The extra value is the prepared, personal next step after the reminder.",
+        "speaker": "Acknowledge what Calendar already does well: dates, alerts, recurring events, and invitations. The reason for a separate app is the workflow around a person: their preferences, a prepared greeting, and a deliberate decision to send.",
+        "sources": [
+          [
+            "Apple: Calendar alerts",
+            "https://support.apple.com/en-gb/guide/iphone/iphdafdf98a1/ios"
+          ],
+          [
+            "Apple: Calendar invitations",
+            "https://support.apple.com/en-ae/guide/iphone/iph82c5721ca/ios"
+          ]
+        ]
+      },
+      {
+        "type": "product",
+        "key": "product",
+        "kicker": "My Touchpoint",
+        "title": "Your people.\nTheir moments. Your words.",
+        "lead": "One place to prepare the small gestures that keep a relationship alive.",
+        "pillars": [
+          [
+            "People",
+            "The people you care about, with the details you want to remember."
+          ],
+          [
+            "Moments",
+            "Birthdays, anniversaries, cultural holidays, and occasions of your own."
+          ],
+          [
+            "Words",
+            "Personal greeting drafts you can review, edit, and send yourself."
+          ]
+        ],
+        "ribbon": "From birthday wishes to dinner invitations, prepared in one place.",
+        "speaker": "Position My Touchpoint as a personal attention assistant. Keep the three ideas connected: a real person, a meaningful occasion, and something thoughtful to say."
+      },
+      {
+        "type": "steps",
+        "key": "how",
+        "kicker": "How it works",
+        "title": "A thoughtful message\nstarts before the day arrives.",
+        "lead": "Prepare once. Review when it matters. Send in your own voice.",
+        "steps": [
+          [
+            "Add your people",
+            "Import selected contacts or start with a name."
+          ],
+          [
+            "Choose the occasion",
+            "Add a date and set the reminder schedule."
+          ],
+          [
+            "Make the words yours",
+            "Use template variations, photos, or optional Apple Intelligence."
+          ],
+          [
+            "Review and send",
+            "Open the prepared message in Messages or Mail and choose to send."
+          ]
+        ],
+        "foot": "Apple Intelligence requires a supported device and language. Message generation is optional.",
+        "speaker": "Walk through one actual journey. A name is enough to begin; contact details can be added later. Apple Intelligence helps with a draft on supported devices. My Touchpoint never sends a greeting automatically."
+      },
+      {
+        "type": "moment",
+        "key": "benefit",
+        "kicker": "What changes for a person",
+        "title": "Time to make it personal.",
+        "lead": "Imagine Anna preparing for her mom’s birthday.",
+        "before": [
+          "A few days before",
+          "A reminder gives Anna time to choose flowers and find a family photo."
+        ],
+        "during": [
+          "On the day",
+          "“Happy birthday, Mom. I found this photo from our summer by the sea…”"
+        ],
+        "after": [
+          "A moment that stays",
+          "“You remembered that trip. That means so much.”"
+        ],
+        "foot": "Illustrative scenario",
+        "speaker": "Make the benefit concrete: enough time to prepare, a personal detail in the message, and a moment the recipient can keep. Anna and the reply are illustrative. The app does not order flowers."
+      },
+      {
+        "type": "habit",
+        "key": "habit",
+        "kicker": "A reason to come back",
+        "title": "A quick look today.\nMore moments remembered.",
+        "lead": "Attention becomes easier when the next step is already prepared.",
+        "loop": [
+          [
+            "Notice",
+            "A reminder, widget, or Siri shortcut brings an occasion into view."
+          ],
+          [
+            "Personalise",
+            "Open the greeting and change a few words."
+          ],
+          [
+            "Reach out",
+            "Send it yourself and continue the conversation."
+          ]
+        ],
+        "cadence": "Add a person when you think of them. Review the week ahead. Prepare the next season’s greetings.",
+        "speaker": "Describe a practical routine, without promising a fixed time saving. The widget and reminders surface the next occasion; saved notes and templates reduce preparation next time."
+      },
+      {
+        "type": "emotion",
+        "key": "emotion",
+        "kicker": "The emotional value",
+        "title": "The message is yours.\nThe memory is theirs.",
+        "lead": "Technology helps you find the moment and the words. You bring the meaning.",
+        "commitments": [
+          [
+            "Your voice",
+            "Review and edit every message. You press Send."
+          ],
+          [
+            "Your space",
+            "Your workspace lives on your device and syncs through private iCloud."
+          ],
+          [
+            "Your connection",
+            "No social feed or advertising between you and the people you love."
+          ]
+        ],
+        "quote": "“Thank you for remembering.”",
+        "foot": "Illustrative reply",
+        "speaker": "This is the emotional centre of the story. Pause. A greeting matters because of the person behind it. The technology should make that personal action easier."
+      },
+      {
+        "type": "partners",
+        "key": "partners",
+        "kicker": "Audience & partnerships",
+        "title": "Meet people who already\nwant to make someone happy.",
+        "lead": "A planned occasion creates a natural opportunity for useful help.",
+        "segments": [
+          [
+            "Busy adults",
+            "Family, friends, and work, with little room to prepare."
+          ],
+          [
+            "People living apart",
+            "International families and loved ones across cultures."
+          ],
+          [
+            "Relationship-led professionals",
+            "People who keep in touch with clients and colleagues."
+          ]
+        ],
+        "formats": [
+          "Gifts & delivery",
+          "Wish lists",
+          "Affiliate programmes",
+          "Branded greeting collections",
+          "Tools for businesses"
+        ],
+        "formatsTitle": "Formats to explore",
+        "foot": "Proposed audiences and partnership formats.",
+        "speaker": "Connect the proposed audiences with concrete formats: gifts and delivery, wish lists, affiliates, seasonal collections, and business tools. These are opportunities to explore, not current integrations or established audience data."
+      },
+      {
+        "type": "future",
+        "key": "future",
+        "kicker": "Commercial potential & future",
+        "title": "Build around a meaningful\nmoment, then earn the next one.",
+        "lead": "A possible business grows when it helps people follow through.",
+        "columns": [
+          [
+            "Today",
+            "A native iPhone app in English and Russian. Currently in App Store review."
+          ],
+          [
+            "Possible revenue",
+            "Premium subscriptions, partner commissions, branded collections, and business plans."
+          ],
+          [
+            "Future directions",
+            "Android and web access, shared family circles, wish lists, and gifting integrations."
+          ]
+        ],
+        "principle": "Partner offers should be optional, clearly labelled, and designed around user trust.",
+        "foot": "Partnership and roadmap concepts for discussion.",
+        "speaker": "Describe the commercial logic as a hypothesis: an occasion can create relevant demand, and useful help may generate repeat use. Do not claim traction, revenue, market size, live partnerships, or a guaranteed roadmap."
+      },
+      {
+        "type": "cta",
+        "key": "action",
+        "kicker": "The next step",
+        "title": "Make the next moment count.",
+        "lead": "A thoughtful first step for you. An opportunity to build something useful together.",
+        "panels": [
+          {
+            "label": "For you",
+            "title": "Start with three people",
+            "body": "Whose important day is next? Prepare a few words that only you would say.",
+            "button": "Ask about the launch",
+            "subject": "My Touchpoint — App Launch"
+          },
+          {
+            "label": "For partners & sponsors",
+            "title": "Start with one useful pilot",
+            "body": "Choose an occasion, explore a helpful collection or service, and agree how to learn from the response.",
+            "button": "Discuss a pilot",
+            "subject": "My Touchpoint — Partnership Pilot"
+          }
+        ],
+        "closing": "My Touchpoint. Remember people. Create moments.",
+        "speaker": "End with two clear actions within the same story. Users can begin with three people and contact the developer about the launch. Partners can discuss one focused pilot. The app is still in App Store review."
+      }
     ]
   },
-  ru: {
-    title: 'Помните о людях. Будьте рядом вовремя.',
-    intro: 'My Touchpoint помогает вовремя и своими словами напомнить о себе тем, кто вам дорог: поздравить, поблагодарить, собрать вместе и сохранить связь.',
-    principles: [
-      ['Вовремя', 'Напоминание заранее, пока есть время выбрать подарок или позвонить.'],
-      ['Лично', 'Продуманный черновик, который легко превратить в ваши собственные слова.'],
-      ['Ваше решение', 'Вы проверяете сообщение и сами нажимаете «Отправить».']
-    ],
-    taglines: ['Будьте рядом вовремя.', 'Маленькие знаки внимания. Большие воспоминания.', 'Технологии, которые сближают.'],
-    slides: [
-      { key: 'cover', label: 'Идея', title: 'My Touchpoint. Внимание начинается с малого.',
-        points: ['Приложение для iPhone, которое помогает помнить о важных людях и вовремя выходить на связь.', 'Дни рождения, годовщины, праздники и личные поводы в одном спокойном плане.', 'Люди, моменты и слова, которые вы хотите сказать, — вместе.'],
-        text: ['My Touchpoint — личный помощник внимания. В нём собраны важные люди, значимые даты и сообщения, которые вы хотите им отправить. Поздравить, поблагодарить, позвать на встречу — приложение помогает найти место для этих небольших жестов в повседневной жизни.'],
-        visual: 'Экран «Сегодня» на iPhone: «Через 3 дня день рождения мамы» и поздравление, готовое к проверке.',
-        speaker: 'Начните со знакомого вопроса: «Кого из близких вы последний раз поздравили с опозданием?»' },
-      { key: 'problem', label: 'Проблема', title: 'За занятой неделей может последовать долгая тишина.',
-        points: ['О дне рождения друга вспоминаем поздно вечером.', 'Тёплое поздравление превращается в спешную фразу.', 'У семьи, друзей, коллег и клиентов есть моменты, которые хочется помнить.', 'После пропущенного повода снова написать бывает сложнее.'],
-        text: ['Связь с близкими может ослабевать незаметно. За безумной неделей теряется день рождения. О годовщине родителей вспоминаем, когда звонить уже поздно. Отправляем нескольким людям одинаковое поздравление, а личный разговор откладываем. Семья, работа, переезды, разные страны и культуры дают нам больше поводов, чем удобно держать в голове.'],
-        visual: 'Позднее уведомление о дне рождения рядом с пустым полем сообщения.',
-        speaker: 'Покажите обычную перегрузку повседневной жизни, без упрёка за забывчивость.' },
-      { key: 'context', label: 'Недостающее звено', title: 'Объединить дату, человека и нужные слова.',
-        points: ['Даты хранятся в календарях, личные детали — в заметках и переписках.', 'После напоминания ещё нужно решить, что написать.', 'Язык, способ связи и прошлые поздравления дают полезный контекст.', 'Когда всё рядом, подготовиться к важному моменту проще.'],
-        text: ['Календари и напоминания полезны, но детали отношений часто разбросаны между контактами, заметками и чатами. В нужный день всё ещё приходится искать слова и вспоминать, как человеку удобнее получать сообщения. My Touchpoint собирает эту подготовку в одном месте.'],
-        visual: 'Контакты, даты и черновик сообщения объединяются вокруг одного человека.' },
-      { key: 'product', label: 'Продукт', title: 'Место для ваших важных людей и их моментов.',
-        points: ['Храните людей, даты, поводы и идеи поздравлений вместе.', 'Планируйте заранее и готовьте отдельное сообщение каждому.', 'Проверяйте, редактируйте и открывайте сообщение в Сообщениях или Почте.', 'Последние слова и решение об отправке остаются за вами.'],
-        text: ['My Touchpoint объединяет важных людей, их дни рождения и годовщины, ваши шаблоны поздравлений. Он помогает спланировать общение, подготовить личные черновики и вовремя вспомнить о них. Вы проверяете текст и самостоятельно отправляете его через системное окно Сообщений или Почты.'],
-        visual: 'Три слова, в которых собрана идея: Люди · Моменты · Слова.' },
-      { key: 'steps', label: 'Как это работает', title: 'Люди. Поводы. Слова. Момент.',
-        points: ['Люди: добавьте вручную или импортируйте выбранные контакты. Для начала хватит имени.', 'Поводы: дни рождения, годовщины, праздники разных культур и ваши собственные даты.', 'Слова: варианты шаблонов, личные детали, до пяти фото и помощь Apple Intelligence на поддерживаемом устройстве.', 'Момент: проверьте план, получите напоминание, откройте поздравление и отправьте его сами.'],
-        text: ['Начните с одного человека. Добавьте важные даты, выберите способ связи и язык. Подготовьте шаблоны с вариациями и подстановкой имени, повода и даты. Прикрепите фотографии или воспользуйтесь Apple Intelligence на поддерживаемом устройстве. Перед сохранением плана проверьте сообщение каждого получателя, а после напоминания ещё раз взгляните на текст.'],
-        visual: 'Четыре экрана по порядку: Люди → Поводы → Сообщение → Сегодня.' },
-      { key: 'year', label: 'Пример использования', title: 'Год небольших знаков внимания.', illustration: true,
-        points: ['Январь: Анна добавляет близких и планирует важные поводы на год.', 'Март: раннее напоминание даёт время выбрать цветы и написать маме тёплое поздравление.', 'Июнь: другая вариация шаблона помогает по-новому поздравить друзей с годовщиной.', 'Декабрь: Анна готовит личные приглашения на ужин и отмечает, кому уже написала.'],
-        text: ['Представьте Анну, которая планирует поводы на год. В январе она добавляет близких. Перед днём рождения мамы напоминание оставляет время выбрать цветы и подготовить сообщение с семейным фото. На годовщину друзей Анна выбирает другую вариацию шаблона. В декабре планирует ужин и отправляет личные приглашения. Это иллюстративная история, а не результат реального клиента.'],
-        visual: 'Лента с января по декабрь: день рождения, годовщина и ужин.',
-        speaker: 'Покажите год одного человека. История иллюстрирует сценарий и не является измеренным результатом.' },
-      { key: 'gatherings', label: 'Встречи', title: 'Найдите время собраться вместе.',
-        points: ['Создайте ужин, день рождения, встречу выпускников или другое событие.', 'Выберите участников, время и место через Apple Maps.', 'Подготовьте личные приглашения с адресом и деталями.', 'Настройте напоминания связаться с участниками и отмечайте, кому уже написали.'],
-        text: ['Некоторые моменты хочется провести вместе. Создайте событие, выберите участников и найдите место в Apple Maps. Подготовьте приглашение каждому человеку, проверьте и отправьте его самостоятельно. Напоминания помогут связаться с людьми до встречи, а статусы участников покажут, кому вы уже написали.'],
-        visual: 'Событие с местом, временем и статусами приглашений участников.' },
-      { key: 'benefits', label: 'Повседневная польза', title: 'Меньше держать в голове. Больше быть рядом.',
-        points: ['Готовьтесь, пока есть время выбрать подарок, созвониться или написать личные слова.', 'Начинайте с черновика, который легко сделать своим.', 'Держите семью, друзей, коллег и клиентов в одном плане.', 'Создавайте ритм небольших регулярных жестов.'],
-        text: ['Практическая польза — спокойный план на неделю, месяц и год вперёд. Нужные детали рядом, а у сообщения уже есть начало. Эмоциональная ценность — возможность чаще проявлять внимание через небольшие жесты, которым находится место в обычной жизни.'],
-        visual: 'Один экран «Сегодня» с ближайшими поводами и подготовленными сообщениями.' },
-      { key: 'habit', label: 'Привычка', title: 'Небольшая часть вашего утра.',
-        points: ['Уведомление, виджет или команда Siri показывают ближайший важный момент.', 'Откройте черновик, поправьте слова и решите, когда отправить.', 'Добавляйте человека, заметку или полезный шаблон, когда вспомните.', 'Регулярно просматривайте поводы и планируйте дальше, когда вам удобно.'],
-        text: ['Короткий взгляд на «Сегодня» может стать частью утра. Напоминание или виджет подсказывает ближайший повод. Вы проверяете поздравление, меняете пару слов и выходите на связь. Каждый добавленный человек, заметка и шаблон упрощают подготовку следующего знака внимания.'],
-        visual: 'Простой ритм: напоминание → проверка → сообщение → продолжение общения.' },
-      { key: 'trust', label: 'Наш принцип', title: 'Технологии, которые помогают становиться ближе.',
-        points: ['Вы выбираете окончательный текст и нажимаете «Отправить».', 'Apple Intelligence помогает с черновиком на поддерживаемых устройствах.', 'Данные хранятся на устройстве и синхронизируются через ваш личный iCloud.', 'Спокойный интерфейс без социальной ленты и рекламы.'],
-        text: ['Личное общение начинается с отправителя. В My Touchpoint вы определяете окончательный текст и решаете, когда его отправить. Генерация на устройстве помогает, если слова не находятся. Данные хранятся на устройстве и при доступности iCloud синхронизируются через вашу личную учётную запись. У внимания появляется своё спокойное место.'],
-        visual: 'Иллюстрация ответа: «Спасибо, что вспомнил. Мне очень приятно».',
-        speaker: 'Ответ используется как пример текста, а не как реальный отзыв пользователя.' },
-      { key: 'audience', label: 'Аудитория', title: 'Люди, для которых отношения важны.', partners: true,
-        points: ['Занятые взрослые, совмещающие семью, друзей и работу.', 'Люди вдали от близких и интернациональные семьи с праздниками разных культур.', 'Профессионалы, которые поддерживают долгие отношения с клиентами и коллегами.', 'Те, кто уже уделяет время поводам и подаркам и ищет более спокойный способ планировать.'],
-        text: ['Предполагаемая аудитория — занятые взрослые, люди вдали от близких и специалисты, для которых важны личные отношения с клиентами. Например, риелторы, консультанты, агенты и коучи. Это гипотезы аудитории для проверки в пилоте, а не сведения о существующей пользовательской базе.'],
-        visual: 'Три портрета: занятая семья, интернациональная семья и специалист, работающий с постоянными клиентами.' },
-      { key: 'partnerships', label: 'Идеи партнёрств', title: 'Помочь превратить доброе намерение в действие.', partners: true, future: true,
-        points: ['Подарки и доставка: своевременные идеи цветов, впечатлений или подписок.', 'Списки желаний: более личный и осознанный выбор подарка.', 'Affiliate-программы: возможные реферальные договорённости с подходящими сервисами.', 'Брендированные коллекции: сезонные шаблоны и оформление поздравлений.', 'Инструменты для бизнеса: сценарии поздравлений клиентов и сотрудников.'],
-        text: ['Возможные партнёрства могут связать запланированный повод с полезным следующим шагом: выбрать цветы, найти впечатление или подготовить сезонное поздравление. Для обсуждения подходят доставка подарков, списки желаний, реферальные программы, брендированные коллекции и бизнес-инструменты. Это концепции; действующих интеграций или предложений они не описывают.'],
-        visual: 'Явно помеченный концепт: необязательная идея подарка рядом с ближайшим поводом.',
-        speaker: 'Предложите ограниченный пилот. В центре — согласие, прозрачная маркировка и контроль пользователя.' },
-      { key: 'business', label: 'Коммерческое направление', title: 'Полезная помощь в подходящий момент.', partners: true, future: true,
-        points: ['Приближающийся повод — естественный момент подумать о подарке или услуге.', 'Возможные источники дохода: Premium, партнёрские комиссии, брендированный контент и бизнес-тарифы.', 'Будущие партнёрские предложения должны быть необязательными и ясно обозначенными.', 'Предположения об аудитории, объёме рынка и результатах пилота ещё нужно проверить.'],
-        text: ['Коммерческая идея — предложить подходящий сервис, когда человек уже готовится к поводу. Возможные источники дохода включают подписку, реферальные комиссии, брендированный контент и бизнес-тарифы. Это варианты для оценки. Пилот должен подтвердить спрос и пользу при прозрачных предложениях и бережном обращении с личными данными. Здесь не заявлены показатели роста, рынка или выручки.'],
-        visual: 'Концептуальная схема: повод, намерение пользователя и необязательный сервис партнёра.' },
-      { key: 'future', label: 'Возможное развитие', title: 'От личных напоминаний к общим моментам.', future: true,
-        points: ['Сейчас: нативное приложение для iPhone на русском и английском, на модерации в App Store.', 'Возможное развитие: Android и веб-доступ для большего круга людей.', 'Списки желаний, идеи подарков и семейное планирование.', 'Более полная история подарков и сообщений, интеграции с доставкой, бронированием и сертификатами.'],
-        text: ['My Touchpoint — нативное приложение для iPhone на русском и английском языках; сейчас оно проходит модерацию в App Store. Возможные направления развития — Android и веб-доступ, списки желаний, семейные круги, расширенная история знаков внимания и интеграции с сервисами подарков или бронирования. Это идеи для проработки, без объявленных сроков и обещания доступности.'],
-        visual: 'Две колонки: возможности продукта сегодня и направления для изучения.' },
-      { key: 'join', label: 'Следующий шаг', title: 'Начните с человека, которому давно хотели написать.',
-        points: ['Вспомните троих самых близких и чей важный день следующий.', 'Приложение для iPhone сейчас проходит модерацию в App Store.', 'С вопросами о продукте можно написать разработчику.', 'Партнёрам: обсудим небольшой пилот к подходящему важному поводу.'],
-        text: ['Начните с людей, для которых хочется находить время. My Touchpoint сейчас проходит модерацию в App Store; с вопросами о продукте можно написать разработчику. Если ваш бренд или сервис помогает людям поздравлять и сближаться, свяжитесь с нами для обсуждения возможного пилота.'],
-        visual: 'Контакт разработчика и актуальный статус модерации в App Store.' }
+  "ru": {
+    "ui": {
+      "deck": "Слайды",
+      "text": "Полный текст",
+      "language": "Язык",
+      "format": "Формат",
+      "previous": "Предыдущий слайд",
+      "next": "Следующий слайд",
+      "print": "Печать / PDF",
+      "copy": "Копировать текст",
+      "fullscreen": "Полный экран",
+      "exitFullscreen": "Выйти из полного экрана",
+      "notes": "Заметки спикеру",
+      "privacy": "Конфиденциальность",
+      "support": "Поддержка",
+      "source": "Исходный материал",
+      "copied": "Скопировано",
+      "copyHelp": "Выделите и скопируйте текст ниже.",
+      "review": "Приложение для iPhone · На модерации в App Store",
+      "slide": "Слайд",
+      "of": "из",
+      "jump": "Выбрать слайд",
+      "keyboard": "Листайте клавишами ← →",
+      "concept": "Направления развития",
+      "example": "Иллюстративный пример",
+      "contact": "o.chetrari@gmail.com",
+      "storyTitle": "My Touchpoint: помнить о людях и создавать моменты",
+      "deckDescription": "10 слайдов. История о внимании, отношениях и важных моментах.",
+      "skip": "Перейти к презентации"
+    },
+    "story": {
+      "paragraphs": [
+        "My Touchpoint помогает помнить дни рождения, годовщины и важные поводы — и превращать их в личные сообщения, приглашения и приятные воспоминания.",
+        "Календарь хранит даты и напоминает о них. My Touchpoint объединяет человека, его предпочтения и подготовленное поздравление: вы знаете, кому написать, и уже нашли подходящие слова.",
+        "Добавьте близких, выберите поводы и подготовьте сообщения с вариациями шаблонов, фото или помощью Apple Intelligence на поддерживаемом устройстве. Короткий взгляд на «Сегодня» показывает ближайшие события. Проверьте черновик, добавьте своё и отправьте сами через Сообщения или Почту.",
+        "Для партнёров предстоящие поводы — возможность предложить полезный сервис. Возможные форматы: подарки и доставка, списки желаний, affiliate-программы, брендированные коллекции и инструменты для бизнеса. Предлагаем начать с одного небольшого пилота.",
+        "Приложение для iPhone поддерживает русский и английский и сейчас проходит модерацию в App Store. Начните с троих близких. Вопросы о запуске и партнёрстве: o.chetrari@gmail.com.",
+        "My Touchpoint. Помнить о людях. Создавать моменты."
+      ]
+    },
+    "slides": [
+      {
+        "type": "opening",
+        "key": "problem",
+        "kicker": "Проблема",
+        "title": "Вы хотели написать.\nНо день уже прошёл.",
+        "lead": "Люди нам важны. В загруженной жизни легко упустить их важные моменты.",
+        "statement": "My Touchpoint помогает помнить о своих людях и давать им почувствовать ваше внимание.",
+        "clock": "23:47",
+        "notification": "День рождения мамы · Сегодня",
+        "draft": "«С днём рождения! Прости, что так поздно…»",
+        "note": "Знакомая ситуация. И возможность подготовиться иначе.",
+        "speaker": "Начните с узнаваемой ситуации: о дне рождения вспомнили, когда день почти закончился. Проблема — в расстоянии между желанием проявить внимание и моментом, когда мы это делаем."
+      },
+      {
+        "type": "comparison",
+        "key": "calendar",
+        "kicker": "Зачем отдельное приложение?",
+        "title": "«У меня уже есть Календарь.\nЗачем мне ещё одно приложение?»",
+        "lead": "Календарь хорошо хранит даты и уведомляет о них. My Touchpoint помогает подготовить личный знак внимания.",
+        "columns": [
+          "Задача",
+          "Календарь в телефоне",
+          "My Touchpoint"
+        ],
+        "rows": [
+          [
+            "Вспомнить о дне рождения",
+            "День рождения или повторяющееся событие с уведомлением",
+            "Повод, связанный с конкретным человеком"
+          ],
+          [
+            "Подготовить слова",
+            "Поздравление вы готовите отдельно",
+            "Личные черновики, вариации шаблонов, фото"
+          ],
+          [
+            "Сохранить личный контекст",
+            "Заметки к событию, которые вы ведёте сами",
+            "Язык, способ связи и важные даты в профиле человека"
+          ]
+        ],
+        "takeaway": "Ценность отдельного приложения — готовый личный шаг после напоминания.",
+        "speaker": "Признайте возможности Календаря: даты, уведомления, повторения и приглашения. Причина для отдельного приложения — связанный сценарий вокруг человека: его предпочтения, подготовленное поздравление и осознанная отправка.",
+        "sources": [
+          [
+            "Apple: уведомления Календаря",
+            "https://support.apple.com/en-gb/guide/iphone/iphdafdf98a1/ios"
+          ],
+          [
+            "Apple: приглашения Календаря",
+            "https://support.apple.com/en-ae/guide/iphone/iph82c5721ca/ios"
+          ]
+        ]
+      },
+      {
+        "type": "product",
+        "key": "product",
+        "kicker": "My Touchpoint",
+        "title": "Ваши люди. Их моменты.\nВаши слова.",
+        "lead": "Одно место для небольших жестов, из которых складываются отношения.",
+        "pillars": [
+          [
+            "Люди",
+            "Те, кто вам дорог, и детали, которые хочется о них помнить."
+          ],
+          [
+            "Моменты",
+            "Дни рождения, годовщины, праздники разных культур и личные поводы."
+          ],
+          [
+            "Слова",
+            "Личные черновики, которые вы проверяете, правите и отправляете сами."
+          ]
+        ],
+        "ribbon": "От поздравления с днём рождения до приглашения на ужин — в одном плане.",
+        "speaker": "Покажите My Touchpoint как личного помощника внимания. Свяжите три идеи: конкретный человек, значимый повод и слова, которые хочется ему сказать."
+      },
+      {
+        "type": "steps",
+        "key": "how",
+        "kicker": "Как это работает",
+        "title": "Личное поздравление\nначинается раньше праздника.",
+        "lead": "Подготовьте заранее. Проверьте в нужный момент. Отправьте своими словами.",
+        "steps": [
+          [
+            "Добавьте людей",
+            "Импортируйте выбранные контакты или начните с имени."
+          ],
+          [
+            "Выберите повод",
+            "Добавьте дату и настройте напоминания."
+          ],
+          [
+            "Подготовьте слова",
+            "Используйте вариации шаблонов, фото или помощь Apple Intelligence."
+          ],
+          [
+            "Проверьте и отправьте",
+            "Откройте текст в Сообщениях или Почте и решите, когда отправить."
+          ]
+        ],
+        "foot": "Apple Intelligence требует поддерживаемого устройства и языка. Генерация необязательна.",
+        "speaker": "Пройдите один реальный сценарий. Для начала достаточно имени; контакты можно добавить позже. На поддерживаемом устройстве Apple Intelligence помогает с черновиком. Приложение не отправляет поздравления автоматически."
+      },
+      {
+        "type": "moment",
+        "key": "benefit",
+        "kicker": "Польза для человека",
+        "title": "Есть время\nсделать это личным.",
+        "lead": "Представьте, как Анна готовится ко дню рождения мамы.",
+        "before": [
+          "За несколько дней",
+          "Напоминание оставляет время выбрать цветы и найти семейное фото."
+        ],
+        "during": [
+          "В сам день",
+          "«Мам, с днём рождения! Нашла наше фото из того лета у моря…»"
+        ],
+        "after": [
+          "Момент, который остаётся",
+          "«Ты вспомнила ту поездку. Как же приятно!»"
+        ],
+        "foot": "Иллюстративная история",
+        "speaker": "Покажите конкретную пользу: время подготовиться, личная деталь в сообщении и приятный момент для получателя. Анна и её переписка — пример. Приложение не заказывает цветы."
+      },
+      {
+        "type": "habit",
+        "key": "habit",
+        "kicker": "Зачем возвращаться",
+        "title": "Короткий взгляд утром.\nБольше моментов вместе.",
+        "lead": "Проявлять внимание проще, когда следующий шаг уже подготовлен.",
+        "loop": [
+          [
+            "Заметьте",
+            "Напоминание, виджет или команда Siri показывают ближайший повод."
+          ],
+          [
+            "Добавьте своё",
+            "Откройте черновик и поправьте пару слов."
+          ],
+          [
+            "Выйдите на связь",
+            "Отправьте сообщение сами и продолжите разговор."
+          ]
+        ],
+        "cadence": "Добавляйте людей, когда думаете о них. Просматривайте неделю вперёд. Готовьтесь к следующему сезону праздников.",
+        "speaker": "Опишите простую привычку без обещаний точной экономии времени. Виджет и напоминания показывают ближайший повод, а сохранённые детали и шаблоны упрощают подготовку."
+      },
+      {
+        "type": "emotion",
+        "key": "emotion",
+        "kicker": "Эмоциональная ценность",
+        "title": "Сообщение — ваше.\nВоспоминание — у них.",
+        "lead": "Технологии помогают найти момент и слова. Смысл в них вкладываете вы.",
+        "commitments": [
+          [
+            "Ваш голос",
+            "Вы проверяете и правите текст. Вы нажимаете «Отправить»."
+          ],
+          [
+            "Ваше пространство",
+            "Данные хранятся на устройстве и синхронизируются через личный iCloud."
+          ],
+          [
+            "Ваша связь",
+            "Без социальной ленты и рекламы между вами и близкими."
+          ]
+        ],
+        "quote": "«Спасибо, что вспомнил».",
+        "foot": "Пример ответа",
+        "speaker": "Это эмоциональный центр истории. Сделайте паузу. Поздравление важно благодаря человеку, который его отправил. Технологии помогают ему проявить внимание."
+      },
+      {
+        "type": "partners",
+        "key": "partners",
+        "kicker": "Аудитория и партнёрства",
+        "title": "Рядом с человеком, который\nуже хочет порадовать близкого.",
+        "lead": "Запланированный повод — естественный момент предложить полезную помощь.",
+        "segments": [
+          [
+            "Занятые взрослые",
+            "Семья, друзья, работа и мало времени на подготовку."
+          ],
+          [
+            "Люди вдали от близких",
+            "Интернациональные семьи и праздники разных культур."
+          ],
+          [
+            "Специалисты с постоянными клиентами",
+            "Личные отношения с клиентами и коллегами."
+          ]
+        ],
+        "formats": [
+          "Подарки и доставка",
+          "Списки желаний",
+          "Affiliate-программы",
+          "Брендированные коллекции",
+          "Инструменты для бизнеса"
+        ],
+        "formatsTitle": "Форматы для обсуждения",
+        "foot": "Возможные аудитории и партнёрские форматы.",
+        "speaker": "Свяжите аудитории с форматами: подарки и доставка, wish lists, affiliate, сезонные коллекции и бизнес-инструменты. Это идеи для проработки, а не действующие интеграции или данные о текущих пользователях."
+      },
+      {
+        "type": "future",
+        "key": "future",
+        "kicker": "Коммерческий потенциал и развитие",
+        "title": "Помочь в важный момент.\nСтать полезным и в следующий.",
+        "lead": "Возможный бизнес растёт вокруг помощи человеку в его намерении.",
+        "columns": [
+          [
+            "Сегодня",
+            "Нативное приложение для iPhone на русском и английском. На модерации в App Store."
+          ],
+          [
+            "Возможные доходы",
+            "Premium, партнёрские комиссии, брендированные коллекции и бизнес-тарифы."
+          ],
+          [
+            "Направления развития",
+            "Android и веб, семейные круги, списки желаний и интеграции с подарочными сервисами."
+          ]
+        ],
+        "principle": "Партнёрские предложения должны быть необязательными, ясно обозначенными и основанными на доверии.",
+        "foot": "Возможные модели и направления для обсуждения.",
+        "speaker": "Покажите коммерческую логику как гипотезу: повод создаёт уместный спрос, полезная помощь может привести к повторному использованию. Не заявляйте выручку, рост, объём рынка, действующие партнёрства или гарантированную дорожную карту."
+      },
+      {
+        "type": "cta",
+        "key": "action",
+        "kicker": "Следующий шаг",
+        "title": "Пусть следующий момент станет важным.",
+        "lead": "Личный первый шаг для вас. Возможность создать что-то полезное вместе.",
+        "panels": [
+          {
+            "label": "Для вас",
+            "title": "Начните с троих близких",
+            "body": "Чей важный день следующий? Подготовьте слова, которые могли бы сказать именно вы.",
+            "button": "Узнать о запуске",
+            "subject": "My Touchpoint — App Launch"
+          },
+          {
+            "label": "Партнёрам и спонсорам",
+            "title": "Начните с одного пилота",
+            "body": "Выберем повод, обсудим полезную коллекцию или сервис и договоримся, как оценить отклик.",
+            "button": "Обсудить пилот",
+            "subject": "My Touchpoint — Partnership Pilot"
+          }
+        ],
+        "closing": "My Touchpoint. Помнить о людях. Создавать моменты.",
+        "speaker": "Завершите общую историю двумя действиями. Пользователи могут начать с троих близких и написать о запуске. Партнёры — обсудить один небольшой пилот. Приложение пока проходит модерацию в App Store."
+      }
     ]
   }
 };
+
+function getSlides(language) { return kit[language].slides; }
+function getStory(language) { return kit[language].story.paragraphs; }

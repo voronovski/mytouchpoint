@@ -5,220 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="The My Touchpoint pitch kit: our story, product, people, and ideas for future partnerships. Available in English and Russian.">
+  <meta name="description" content="My Touchpoint in ten slides: why a calendar is only the beginning, how the app helps people connect, and opportunities for partners. English and Russian.">
   <title>Pitch Kit · My Touchpoint</title>
-  <style>
-    :root { color-scheme: light dark; --background:#f8f7fb; --surface:#fff; --text:#242230; --muted:#625e70; --accent:#6542b5; --soft:#f0ebfa; --line:#e4e0ed; }
-    * { box-sizing:border-box; }
-    html { scroll-padding-top:28px; }
-    body { margin:0; background:var(--background); color:var(--text); font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
-    button,input,textarea { font:inherit; }
-    a { color:var(--accent); text-underline-offset:4px; }
-    a:hover { text-decoration-thickness:2px; }
-    a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:4px; }
-    button { cursor:pointer; }
-    [hidden] { display:none !important; }
-    .wrap { max-width:1080px; margin:auto; padding:0 32px; }
-    .skip { position:absolute; left:20px; top:-100px; padding:8px 16px; background:var(--surface); z-index:5; }
-    .skip:focus { top:12px; }
-    .masthead { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:36px; }
-    .brand { display:flex; align-items:center; gap:12px; font-size:20px; font-weight:700; letter-spacing:-.5px; }
-    .mark { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:12px; background:#7651c8; flex-shrink:0; }
-    .mark::after { content:""; width:13px; height:13px; border:3px solid white; border-radius:50%; }
-    .edition { color:var(--muted); font-size:12px; letter-spacing:1px; text-transform:uppercase; }
-    .hero { padding:42px 0 32px; }
-    .eyebrow { margin:0 0 12px; color:var(--accent); font-size:12px; font-weight:750; letter-spacing:2px; text-transform:uppercase; }
-    h1 { max-width:850px; margin:0 0 20px; font-size:clamp(36px,5.6vw,60px); line-height:1.13; letter-spacing:-2px; text-wrap:balance; }
-    .intro { max-width:720px; margin:0; color:var(--muted); font-size:19px; line-height:1.65; }
-    .release { display:inline-flex; align-items:center; gap:9px; margin-top:23px; padding:5px 12px; border:1px solid var(--line); border-radius:30px; color:var(--muted); font-size:12px; }
-    .release::before { content:""; width:6px; height:6px; background:var(--accent); border-radius:50%; }
-    .principles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0 0 24px; padding:22px 0; border-block:1px solid var(--line); }
-    .principle { padding:0 24px; border-left:1px solid var(--line); }
-    .principle:first-child { padding-left:0; border:0; }
-    .principle:last-child { padding-right:0; }
-    .principle h2 { margin:0 0 5px; font-size:16px; letter-spacing:0; }
-    .principle p { margin:0; color:var(--muted); font-size:14px; line-height:1.6; }
-    .taglines { margin:0 0 28px; color:var(--muted); font-size:13px; }
-    .taglines summary { cursor:pointer; width:fit-content; }
-    .taglines ul { margin:10px 0; padding-left:20px; }
-    .controls { display:flex; flex-wrap:wrap; gap:16px 24px; align-items:flex-end; padding:22px; border:1px solid var(--line); background:var(--surface); border-radius:18px; }
-    fieldset { margin:0; padding:0; border:0; min-width:0; }
-    legend { padding:0; margin:0 0 7px; color:var(--muted); font-size:11px; font-weight:650; letter-spacing:.8px; text-transform:uppercase; }
-    .segmented { display:flex; padding:3px; border-radius:10px; background:var(--background); border:1px solid var(--line); }
-    .segmented button { min-height:38px; border:0; border-radius:7px; padding:7px 12px; background:transparent; color:var(--muted); font-size:13px; font-weight:550; }
-    .segmented button[aria-pressed="true"] { background:var(--soft); color:var(--accent); box-shadow:0 1px 3px #0000000a; }
-    .language { margin-left:auto; }
-    .layout { display:grid; grid-template-columns:220px minmax(0,1fr); gap:56px; padding-top:36px; padding-bottom:64px; align-items:start; }
-    .contents { position:sticky; top:26px; max-height:calc(100vh - 52px); overflow:auto; font-size:13px; scrollbar-width:thin; }
-    .contents h2 { margin:0 0 14px; font-size:13px; letter-spacing:0; }
-    .contents ol { list-style:none; margin:0; padding:0; }
-    .contents li { margin:0 0 11px; }
-    .contents a { display:flex; align-items:baseline; gap:12px; color:var(--muted); text-decoration:none; line-height:1.5; }
-    .contents a:hover { color:var(--accent); }
-    .contents .num { color:var(--accent); font-size:11px; font-variant-numeric:tabular-nums; }
-    main { min-width:0; }
-    .content-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; padding-bottom:22px; border-bottom:1px solid var(--line); }
-    .content-heading h2 { font-size:23px; margin:0; }
-    .content-heading p { margin:5px 0 0; color:var(--muted); font-size:13px; }
-    .actions { display:flex; flex-wrap:wrap; gap:8px; }
-    .button { display:inline-flex; justify-content:center; align-items:center; min-height:42px; padding:8px 14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--text); font-size:13px; font-weight:600; text-decoration:none; }
-    .button:hover { border-color:var(--accent); color:var(--accent); }
-    .button.primary { background:var(--accent); border-color:var(--accent); color:var(--surface); }
-    .copy-status { min-height:24px; margin:8px 0 0; color:var(--accent); font-size:12px; }
-    .section { padding:28px 0 30px; border-bottom:1px solid var(--line); }
-    .section:last-child { border-bottom:0; }
-    .section-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:12px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:1.1px; text-transform:uppercase; }
-    .section-meta .num { font-variant-numeric:tabular-nums; }
-    .badge { padding:2px 7px; border:1px solid var(--line); border-radius:5px; color:var(--muted); font-size:10px; letter-spacing:.4px; }
-    h2,h3 { letter-spacing:-.5px; line-height:1.35; }
-    .section h3 { margin:0 0 18px; max-width:660px; font-size:clamp(23px,2.7vw,30px); text-wrap:balance; }
-    .section ul { margin:0; padding-left:21px; }
-    .section li { padding-left:3px; margin:10px 0; }
-    .section li::marker { color:var(--accent); }
-    .section p { margin:0 0 16px; }
-    .section p:last-child { margin-bottom:0; }
-    .presenter { margin-top:22px; padding:12px 16px; border-left:3px solid var(--accent); background:var(--soft); border-radius:0 10px 10px 0; font-size:13px; color:var(--muted); }
-    .presenter summary { cursor:pointer; color:var(--accent); font-weight:600; }
-    .presenter dl { margin:14px 0 0; }
-    .presenter dt { margin-top:12px; color:var(--text); font-weight:650; }
-    .presenter dd { margin:3px 0 0; }
-    .concept-note { margin:0 0 16px; color:var(--muted); font-size:13px; }
-    .contact { margin-top:30px; padding:24px; background:var(--soft); border:1px solid var(--line); border-radius:18px; }
-    .contact h2 { margin:0 0 8px; font-size:24px; }
-    .contact p { margin:0 0 18px; color:var(--muted); }
-    .contact-links { display:flex; align-items:center; flex-wrap:wrap; gap:12px 18px; }
-    .email { overflow-wrap:anywhere; font-size:14px; }
-    .copy-fallback { padding:16px; margin-top:14px; background:var(--soft); border-radius:12px; }
-    .copy-fallback textarea { width:100%; min-height:180px; padding:12px; background:var(--surface); color:var(--text); border:1px solid var(--line); border-radius:8px; font-size:13px; }
-    .copy-fallback p { margin:0 0 10px; font-size:13px; }
-    footer { border-top:1px solid var(--line); padding:24px 0 32px; color:var(--muted); font-size:12px; }
-    .footer-row,.footer-links { display:flex; flex-wrap:wrap; gap:14px 20px; }
-    .footer-row { justify-content:space-between; }
-    noscript p { padding:20px; border:1px solid var(--line); border-radius:12px; }
-    @media(max-width:800px) {
-      .wrap { padding:0 22px; }
-      .masthead { padding-top:26px; }
-      .hero { padding-top:32px; }
-      .edition { display:none; }
-      .layout { display:block; padding-top:26px; padding-bottom:40px; }
-      .contents { position:static; max-height:none; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid var(--line); }
-      .contents ol { display:flex; flex-wrap:wrap; gap:8px 18px; }
-      .contents li { margin:0; }
-      .contents a { gap:5px; font-size:12px; }
-      .controls { gap:16px; padding:18px; }
-      .language { margin-left:0; }
-    }
-    @media(max-width:520px) {
-      .principles { grid-template-columns:1fr; padding:6px 0; }
-      .principle,.principle:first-child,.principle:last-child { padding:16px 0; border:0; border-bottom:1px solid var(--line); }
-      .principle:last-child { border-bottom:0; }
-      h1 { letter-spacing:-1.3px; }
-      .intro { font-size:17px; }
-      .controls { display:grid; grid-template-columns:minmax(0,1fr); }
-      .segmented button { flex:1; min-height:42px; }
-      .language .segmented { max-width:160px; }
-      .section { padding:24px 0; }
-      .contact { padding:20px; }
-    }
-    @media(prefers-color-scheme:dark) { :root { --background:#17151e; --surface:#211e2b; --text:#f0edf7; --muted:#b9b2c8; --accent:#c1a5ff; --soft:#2b233c; --line:#393143; } .button.primary { color:#211e2b; } }
-    @media print {
-      :root { --background:#fff; --surface:#fff; --text:#000; --muted:#444; --accent:#4f347f; --soft:#fff; --line:#ccc; }
-      body { font-size:11pt; }
-      .wrap { max-width:none; padding:0; }
-      .masthead { padding-top:0; }
-      .hero { padding-top:24px; }
-      h1 { font-size:32pt; }
-      .skip,.controls,.contents,.actions,.copy-status,.copy-fallback,.taglines,.source-link { display:none !important; }
-      .layout { display:block; padding-top:20px; }
-      .section,.contact { break-inside:avoid; }
-      .section h3 { font-size:20pt; }
-      .contact .button { display:none; }
-      .presenter { display:none; }
-      a { color:inherit; }
-    }
-  </style>
+  <link rel="stylesheet" href="slides.css">
   <script src="content.js" defer></script>
   <script src="pitch-kit.js" defer></script>
 </head>
-<body id="top">
-  <a class="skip" href="#kit" data-i18n="skip">Skip to pitch kit</a>
-  <header class="wrap">
+<body>
+  <a class="skip" href="#presentation" data-i18n="skip">Skip to presentation</a>
+  <header class="site-header wrap">
     <div class="masthead">
-      <div class="brand"><span class="mark" aria-hidden="true"></span>My Touchpoint</div>
-      <span class="edition" data-i18n="edition">People · Moments · Words</span>
+      <div class="brand"><span class="mark" aria-hidden="true"></span>My Touchpoint <span class="kit-label">Pitch Kit</span></div>
+      <div class="languages" role="group" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" lang="ru" aria-pressed="false">RU</button>
+      </div>
     </div>
-    <div class="hero">
-      <p class="eyebrow">Pitch Kit</p>
-      <h1 id="hero-title">Remember your people. Be there on time.</h1>
-      <p class="intro" id="hero-intro">My Touchpoint helps you show up for the people who matter, on time and in your own words: to celebrate them, thank them, bring them together, and stay close.</p>
-      <span class="release" data-i18n="release">iPhone · Currently in App Store review</span>
-    </div>
-    <div class="principles" id="principles"></div>
-    <details class="taglines"><summary data-i18n="taglines">More ways to say it</summary><ul id="tagline-list"></ul></details>
-    <div class="controls" aria-label="Pitch kit options">
-      <fieldset>
-        <legend data-i18n="format">Format</legend>
-        <div class="segmented">
-          <button type="button" data-mode="deck" aria-pressed="true" data-i18n="deck">Pitch deck</button>
-          <button type="button" data-mode="text" aria-pressed="false" data-i18n="text">Full text</button>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend data-i18n="audience">Audience</legend>
-        <div class="segmented">
-          <button type="button" data-audience="partners" aria-pressed="true" data-i18n="partners">For partners</button>
-          <button type="button" data-audience="users" aria-pressed="false" data-i18n="users">For users</button>
-        </div>
-      </fieldset>
-      <fieldset class="language">
-        <legend data-i18n="language">Language</legend>
-        <div class="segmented">
-          <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-          <button type="button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
-        </div>
-      </fieldset>
+    <div class="options">
+      <fieldset><legend class="sr-only" data-i18n="format">Format</legend><div class="segmented">
+        <button type="button" data-mode="deck" aria-pressed="true" data-i18n="deck">Slides</button>
+        <button type="button" data-mode="text" aria-pressed="false" data-i18n="text">Full text</button>
+      </div></fieldset>
+      <div class="tools">
+        <button class="tool" type="button" id="copy" data-i18n="copy">Copy text</button>
+        <button class="tool" type="button" id="print" data-i18n="print">Print / PDF</button>
+        <button class="tool present" type="button" id="fullscreen" data-i18n="fullscreen">Full screen</button>
+      </div>
     </div>
   </header>
-  <div class="wrap layout">
-    <nav class="contents" aria-labelledby="contents-title">
-      <h2 id="contents-title" data-i18n="contents">In this kit</h2>
-      <ol id="contents-list"></ol>
-    </nav>
-    <main id="kit">
-      <div class="content-heading">
-        <div><h2 id="view-title">Pitch deck</h2><p id="view-caption"></p></div>
-        <div class="actions">
-          <button type="button" class="button" id="copy" data-i18n="copyDeck">Copy outline</button>
-          <button type="button" class="button" id="print" data-i18n="print">Print / PDF</button>
+  <main class="wrap">
+    <div id="presentation" class="presentation" tabindex="-1" aria-label="My Touchpoint presentation">
+      <div id="slide-stage" class="slide-stage"></div>
+      <div class="deck-toolbar">
+        <button type="button" id="previous" class="arrow" aria-label="Previous slide">←</button>
+        <div class="deck-progress">
+          <div id="slide-dots" class="slide-dots" role="group" aria-label="Choose a slide"></div>
+          <span id="slide-status" class="slide-status" role="status" aria-live="polite" aria-atomic="true">Slide 1 of 10</span>
         </div>
-      </div>
-      <p class="copy-status" id="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
-      <div class="copy-fallback" id="copy-fallback" hidden>
-        <p data-i18n="copyHelp">Copy the selected text with your device’s copy command.</p>
-        <textarea id="copy-text" readonly aria-label="Pitch text to copy"></textarea>
-      </div>
-      <div id="sections"></div>
-      <section class="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title" data-i18n="contactTitle">Let’s make the next moment count.</h2>
-        <p id="contact-copy"></p>
-        <div class="contact-links">
-          <a class="button primary" id="contact-button" href="mailto:voronovski@outlook.com?subject=My%20Touchpoint%20Partnership" data-i18n="contactButton">Get in touch</a>
-          <a class="email" href="mailto:voronovski@outlook.com">voronovski@outlook.com</a>
-        </div>
-      </section>
-      <noscript><p>This kit uses JavaScript to switch language, audience, and format. Please enable JavaScript to read it. You can also <a href="../support/">contact the developer</a>.</p></noscript>
-    </main>
-  </div>
-  <footer>
-    <div class="wrap footer-row">
-      <span>© 2026 My Touchpoint</span>
-      <div class="footer-links">
-        <a href="../privacy/" data-i18n="privacy">Privacy Policy</a>
-        <a href="../support/" data-i18n="support">Support</a>
-        <a class="source-link" href="https://claude.ai/artifact/YHUFAPVqRrQTes1m1aafdy" data-i18n="source">Source material</a>
-        <a href="#top" data-i18n="top">Back to top ↑</a>
+        <button type="button" id="next" class="arrow" aria-label="Next slide">→</button>
+        <button type="button" id="exit-fullscreen" class="tool" data-i18n="exitFullscreen" hidden>Exit full screen</button>
       </div>
     </div>
+    <div class="deck-extras" id="deck-extras">
+      <details id="speaker-notes"><summary data-i18n="notes">Speaker notes</summary><div id="speaker-copy"></div></details>
+      <span class="keyboard-hint" data-i18n="keyboard">Use ← → to move between slides</span>
+    </div>
+    <article id="full-text" class="full-text" hidden></article>
+    <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+    <div id="copy-fallback" class="copy-fallback" hidden>
+      <label for="copy-text" data-i18n="copyHelp">Select and copy the text below.</label>
+      <textarea id="copy-text" readonly></textarea>
+    </div>
+    <noscript><p>Please enable JavaScript to view the slides or contact <a href="mailto:o.chetrari@gmail.com">o.chetrari@gmail.com</a>.</p></noscript>
+  </main>
+  <footer class="wrap footer">
+    <span>© 2026 My Touchpoint</span>
+    <div class="footer-links"><a href="../privacy/" data-i18n="privacy">Privacy Policy</a><a href="../support/" data-i18n="support">Support</a><a href="https://claude.ai/artifact/YHUFAPVqRrQTes1m1aafdy" data-i18n="source">Source material</a></div>
   </footer>
 </body>
 </html>
